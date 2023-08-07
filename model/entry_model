@@ -1,0 +1,35 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const EntrySchema = new Schema({
+  link: {
+    type: String,
+    required: true,
+  },
+  genre: {
+    type: String,
+    required: true,
+  },
+  uploader: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  site: {
+    type: String,
+    required: true,
+  },
+  comments: {
+    type: String,
+    required: false,
+  },
+  cam_details: {
+    type: String,
+    required: false,
+  },
+});
+
+module.exports = mongoose.model("image", EntrySchema);
