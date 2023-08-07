@@ -1,11 +1,18 @@
-const readAll = async (db, req, res) => {
+const {
+  create: createOne,
+  list: listOne,
+  findById,
+  updateOne: updateOneEntry,
+  deleteOne: deleteOneEntry,
+} = require("../service/entry_service");
+
+const readAll = async (req, res) => {
   try {
-    const collection = "images";
-    let response = await db.collection(collection).find().toArray();
-    response.length > 0 ? res.json(response) : res.sendStatus(404);
+    let data = await listOne(req.userId);
+    return data.length > 0 ? res.json(data) : res.sendStatus(404);
   } catch (e) {
     console.log(e);
-    res.sendStatus(500);
+    return res.sendStatus(500);
   }
 };
 
