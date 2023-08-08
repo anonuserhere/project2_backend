@@ -9,8 +9,8 @@ const db = mongoose.connection;
 })().catch((e) => console.log(e));
 
 db.on("error", (e) => console.log(e));
-db.on("connected", () => console.log("mongoose connected"));
-db.on("disconnected", () => console.log("mongoose disconnected"));
+db.on("connected", () => console.log("Connected"));
+db.on("disconnected", () => console.log("Disconnected"));
 
 module.exports = {
   Entry,

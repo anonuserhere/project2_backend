@@ -11,7 +11,7 @@ const create = async (data) => {
 
 const list = async (data) => {
   try {
-    return await Entry.find(data);
+    return await Entry.find(data) || [];
   } catch (e) {
     throw e;
   }

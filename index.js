@@ -66,3 +66,4 @@
 require("dotenv").config();
 require("./routes");
 require("./model");
+require("./firebase");

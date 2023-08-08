@@ -16,15 +16,15 @@ const EntrySchema = new Schema({
   },
   date: {
     type: Date,
-    required: true,
+    required: false,
   },
   site: {
     type: String,
     required: true,
   },
-  comments: {
+  caption: {
     type: String,
-    required: false,
+    required: true,
   },
   cam_details: {
     type: String,
