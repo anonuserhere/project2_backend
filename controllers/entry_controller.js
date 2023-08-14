@@ -54,6 +54,8 @@ const updateOne = async (req, res) => {
     const matched = await updateOneEntry(condition, data);
     if (matched.matchedCount === 0) {
       return res.sendStatus(404);
+    } else if (matched.modifiedCount === 0) {
+      return res.sendStatus(204);
     } else {
       return res.json(matched);
     }

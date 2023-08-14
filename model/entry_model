@@ -6,10 +6,12 @@ const EntrySchema = new Schema({
     type: String,
     required: true,
   },
-  genre: {
-    type: String,
-    required: true,
-  },
+  genre: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
   uploader: {
     type: String,
     required: true,
