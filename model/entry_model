@@ -12,10 +12,6 @@ const EntrySchema = new Schema({
       required: true,
     },
   ],
-  uploader: {
-    type: String,
-    required: true,
-  },
   date: {
     type: Date,
     required: false,
@@ -30,6 +26,11 @@ const EntrySchema = new Schema({
   },
   cam_details: {
     type: String,
+    required: false,
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
     required: false,
   },
 });
