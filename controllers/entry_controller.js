@@ -67,8 +67,8 @@ const updateOne = async (req, res) => {
 
 const deleteOne = async (req, res) => {
   try {
-    const deleted = await deleteOneEntry(req.params.id);
-    return deleted === 0 ? res.sendStatus(404) : res.sendStatus(204);
+    const deletedPost = await deleteOneEntry(req.params.id);
+    return deletedPost === 0 ? res.sendStatus(404) : res.sendStatus(204);
   } catch (e) {
     console.log("Unable to process deletion:", e);
     return res.sendStatus(500);

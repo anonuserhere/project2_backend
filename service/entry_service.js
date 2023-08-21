@@ -11,7 +11,7 @@ const create = async (data) => {
 
 const list = async (data) => {
   try {
-    return await Entry.find(data) || [];
+    return (await Entry.find(data)) || [];
   } catch (e) {
     throw e;
   }
@@ -39,7 +39,7 @@ const deleteOne = async (id) => {
     if (!entry) {
       return false;
     }
-    await Entry.deleteOne();
+    await entry.deleteOne();
     return true;
   } catch (e) {
     throw e;
