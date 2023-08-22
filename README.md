@@ -1,7 +1,9 @@
 Straightforward backend with routing done in Javascript.
 Many thanks to Edison for the file layout/organization tips.
+Hosted on render (https://render.com/)
 
 Technologies/libraries used:
+
 - express
 - mongoose
 - mongoDB
