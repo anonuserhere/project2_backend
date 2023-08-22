@@ -63,7 +63,7 @@
 //   }
 // });
 
-require("dotenv").config();
+// require("dotenv").config();
 require("./routes");
 require("./model");
 require("./firebase");
